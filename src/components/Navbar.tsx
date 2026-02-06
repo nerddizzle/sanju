@@ -10,7 +10,7 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-black/5">
+        <nav className="sticky top-0 z-50 w-full bg-white backdrop-blur-md border-b border-black/5">
             <div className="max-w-6xl mx-auto px-6 h-28 flex items-center justify-between">
                 <Link href="/" className="relative h-24 w-96">
                     <Image
@@ -42,7 +42,10 @@ export function Navbar() {
 
             {/* Mobile Menu Overlay */}
             {isOpen && (
-                <div className="md:hidden absolute top-16 left-0 w-full bg-background border-b border-black/5 flex flex-col py-4 shadow-lg animate-in slide-in-from-top-2">
+                <div
+                    className="md:hidden absolute top-28 left-0 w-full border-b border-black/5 flex flex-col py-4 shadow-lg animate-in slide-in-from-top-2"
+                    style={{ backgroundColor: '#ffffff', opacity: 1, zIndex: 40 }}
+                >
                     <Link
                         href="/"
                         className="px-6 py-4 text-sm font-medium uppercase tracking-wider hover:bg-black/5 transition-colors"
